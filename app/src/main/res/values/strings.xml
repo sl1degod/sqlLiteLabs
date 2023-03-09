@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Главная</string>
+    <string name="welcome"><b>Добро пожаловать!</b></string>
+    <string name="warning">Необходимо пройти регистрацию, чтобы продолжить</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="new_profile">Создайте новый профиль</string>
+    <string name="reg_newprofile"><b>Создание нового профиля</b></string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="sign_in">Войти</string>
+    <string name="kakayato_huina">Необходмо зарегистрироваться, чтобы войти в профиль</string>
+    <string name="email_1">Email 1</string>
+    <string name="password_1">Password 1</string>
+    <string name="profile">profile</string>
+    <string name="insert_user">insert user</string>
+</resources>

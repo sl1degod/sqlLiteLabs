@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/profileUser"
+        android:title="@string/profile"
+        android:icon="@drawable/round_account_circle_24"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/insertUser"
+        android:title="@string/insert_user"
+        android:icon="@drawable/round_add_24"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/deleteUser"
+        android:title="@string/profile"
+        android:icon="@drawable/baseline_delete_24"
+        app:showAsAction="ifRoom|collapseActionView"/>
+</menu>
