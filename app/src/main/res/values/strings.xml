@@ -13,4 +13,6 @@
     <string name="password_1">Password 1</string>
     <string name="profile">profile</string>
     <string name="insert_user">insert user</string>
+    <string name="login_user"><b>Логин:</b></string>
+    <string name="password_user"><b>Пароль:</b></string>
 </resources>
