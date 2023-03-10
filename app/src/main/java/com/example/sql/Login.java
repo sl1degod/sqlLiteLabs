@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
             email = binding.emailTiet.getText().toString();
             password = binding.passwordTiet.getText().toString();
 
-            Singleton.getInstance().setEmail(email);
+
 
             if (email.equals("") || password.equals("")) {
                 Toast.makeText(this, "Все поля должны быть заполнены", Toast.LENGTH_SHORT).show();
@@ -40,6 +40,7 @@ public class Login extends AppCompatActivity {
                 if (checkCredentials == true) {
                     Toast.makeText(this, "Успешно вошли", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                    Singleton.getInstance().setEmail(email);
                 } else {
                     Toast.makeText(this, "Введены неверные данные", Toast.LENGTH_SHORT).show();
                 }
