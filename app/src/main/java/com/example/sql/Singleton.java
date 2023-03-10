@@ -21,9 +21,6 @@ public class Singleton {
     public void setEmail(String email) {
         this.email = email;
     }
-//    123
 
-//    zxc
 
-// publuic
 }
