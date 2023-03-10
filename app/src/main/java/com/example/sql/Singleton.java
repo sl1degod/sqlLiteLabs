@@ -23,5 +23,7 @@ public class Singleton {
     }
 //    123
 
+//    zxc
 
+// publuic
 }
