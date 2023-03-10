@@ -22,4 +22,6 @@ public class Singleton {
         this.email = email;
     }
 //    123
+
+//    timur bot
 }
