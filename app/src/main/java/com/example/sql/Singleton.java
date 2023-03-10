@@ -22,4 +22,5 @@ public class Singleton {
         this.email = email;
     }
 
+
 }
