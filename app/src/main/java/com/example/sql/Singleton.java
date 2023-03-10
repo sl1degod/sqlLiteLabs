@@ -25,7 +25,5 @@ public class Singleton {
 
 //    zxc
 
-//    12333
-
-//    12121212121
+// publuic
 }
