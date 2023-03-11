@@ -78,4 +78,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.delete("users", null, null);
     }
 
+    public Boolean insertUser(String email) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from users where email = ?",
+                new String[]{email});
+        if (cursor.getCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
