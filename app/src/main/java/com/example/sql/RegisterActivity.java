@@ -15,6 +15,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     DataBaseHelper dataBaseHelper;
 
+    Integer id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +27,9 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         binding.buttonReg.setOnClickListener(v -> {
+
             String email = binding.emailTiet.getText().toString();
+            String login = binding.loginTiet.getText().toString();
             String password = binding.passwordTiet.getText().toString();
             String confirmPassword = binding.repeatPasswordTiet.getText().toString();
 
@@ -35,7 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
                 if (password.equals(confirmPassword)) {
                     Boolean checkUserEmail = dataBaseHelper.checkEmail(email);
                     if (checkUserEmail == false) {
-                        Boolean insert = dataBaseHelper.insertData(email, password);
+
+                        Boolean insert = dataBaseHelper.insertData(id, login, email, password);
                         if (insert == true) {
                             Toast.makeText(this, "Регистрация прошла успешно!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), Login.class);

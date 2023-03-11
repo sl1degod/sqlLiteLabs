@@ -19,7 +19,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDataBase) {
-        MyDataBase.execSQL("create Table users(email TEXT primary key, password TEXT)");
+        MyDataBase.execSQL("create Table users(id int primary key, login TEXT, email TEXT, password TEXT )");
     }
 
     @Override
@@ -27,9 +27,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         MyDataBase.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String email, String password) {
+    public Boolean insertData(Integer id, String login, String email, String password) {
         SQLiteDatabase MyDataBase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put("id", id);
+        contentValues.put("login", login);
         contentValues.put("email", email);
         contentValues.put("password", password);
         long result = MyDataBase.insert("users", null, contentValues);
@@ -42,7 +44,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public Boolean checkEmail(String email) {
         SQLiteDatabase MyDataBase = this.getWritableDatabase();
-        Cursor cursor = MyDataBase.rawQuery("Select * from users where email = ?",
+        Cursor cursor = MyDataBase.rawQuery("Select * from users where login = ?",
                 new String[]{email});
         if (cursor.getCount() > 0) {
             return true;
